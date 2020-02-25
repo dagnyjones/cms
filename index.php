@@ -9,6 +9,8 @@ Author URL:
 Text Domain:
 */
 
+
+
 //SECURITY
 defined( 'ABSPATH' ) or die( 'Get outta my houseeee' );
 
@@ -43,5 +45,29 @@ function fix_spelling($content)
 }
 }
 
+// EXTRA ADMIN COLOR ADDED
+
+add_action( 'admin_head', 'admincss' );
+ 
+function admincss(){
+ 
+	echo '<style>
+		#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu {
+            background: #fedf09!important;
+            color: #000000!important;
+            font-weight: bold!important;
+        }
+
+        #adminmenu div.wp-menu-name:hover {
+            background: #fedf09!important;
+            color: #000000!important;
+            font-weight: bold!important;
+            
+        }
+
+    
+    
+	</style>';
+ 
 
 
